@@ -1,0 +1,97 @@
+ul li
+{
+    display:inline;
+    padding:15px;
+    color:white;
+}
+footer
+{
+    
+    padding: 15px;
+    position:absolute;
+   bottom:0;
+   width:100;
+   height:50px; 
+}
+.aab
+{
+    border-left: 1px solid white;
+    padding: 10px;
+}
+a
+{
+    margin-right: 5px;
+    color: white;
+    
+}
+a:link{
+    color: white;
+}
+.set
+{
+    float:left;
+   width: 50px;
+    height: 20px;
+}
+.feature
+{
+    background-color:white;
+  background-blend-mode: screen;
+    width: 100px;
+    height:20px;
+    float: left;
+    display: block;
+}
+img:hover
+{
+    cursor: grabbing;
+}
+.grp
+{
+    padding: 15px;
+}
+
+.flex
+{
+    display: flex;
+    overflow: hidden;
+}
+.flex a
+{
+    
+    height:500px;
+    margin-top:100px;
+}
+
+.widd
+{
+    
+    height: 600px;
+    width: 15%;
+    
+}
+.widthbutton
+{
+    width: 150px;
+    margin-left: 999px;
+    margin-bottom:87px;
+    padding: 100px;
+    
+}
+
+.pos
+{
+    position: fixed;
+}
+.main
+{
+    text-align: center;
+    margin-left: 550px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 420px;
+    border: 3px solid white;
+
+}
+

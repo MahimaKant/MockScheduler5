@@ -1,26 +1,70 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ import './App.css';
+ 
+
+class App extends Component{
+
+constructor(props){
+  super(props);
+  this.state={
+    items: [],
+    isLoaded: false,
+  }
+}
+
+componentDidMount() {
+  fetch('https://jsonplaceholder.typicode.com/users' )//'https://github.com/SinghDigamber/react-local-storage/blob/master/src/components/form-data.component.js'
+  .then(res => res.json())
+  .then(json =>{
+    this.setState({
+      isLoaded: true,
+      items: json,
+    })
+  });
+
+}
+componentWillUpdate(nextProps, nextState) {
+  localStorage.setItem('pig', JSON.stringify(nextState));
+}
+
+render() {
+
+
+  var { isLoaded, items } = this.state;
+
+  if(!isLoaded){
+    return <div>Loading......</div>
+  }
+  else{
+  return(
+    <div className='App' >
+      Data has been Loaded
+
+
+      <ul>
+        {items.map(item =>(
+            <li key={item.id} style={{color:"black"}}>
+               Name: {item.name} | Email: {item.email}
+            </li>
+
+        ))};
+
+
+      </ul>
+
+
+
+    </div>  
+
+
+
+  )};
+
+}
+
+
+
 }
 
 export default App;

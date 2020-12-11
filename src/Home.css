@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('imgg.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.79;
+}
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 2px;
+}
+
+.heading1{
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+}
+.heading2{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.2rem;
+}
+.heading3{
+    font-family: 'Piedra', cursive;
+    font-size: 1.2rem;
+}
+.services-container{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+#f1{
+top:200px;
+}
